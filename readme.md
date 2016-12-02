@@ -1,4 +1,4 @@
-# Our project model after the Web Search Engine by MeTA, the following is the initial setup. To run our project, one must include /meta in /cpp. Also a dataset (.dat) is required for the Search Engine, the dataset should be located at the "prefix" specified in config.toml
+## Our project model after the Web Search Engine by MeTA, the following is the initial setup instructed by MeTA. To run our project, one must include /meta in /cpp. Also a dataset (.dat) is required for the Search Engine, the dataset should be located at the "prefix" specified in config.toml
 
 
 # [MeTA](https://meta-toolkit.org) Search App
