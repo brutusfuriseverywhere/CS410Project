@@ -50,16 +50,20 @@ print_results = (result) ->
     #//continue if (doc.path.includes ":") or (doc.path.length > 60)
     displayed += 1
     #//path = doc.path.replace(/_/g, " ")
-    console.log(doc.timestamp)
+    #console.log(doc.timestamp)
     time = doc.timestamp
-    time = time.substring(0, time.length - 1);
-    time = time.replace(":", "m");
-    time = time.concat("s");
+    #time = time.substring(0, time.length - 1)
+    time = time.replace(":", "m")
+    time = time.concat("s")
+    link = doc.youtubeLink
+    link = link.concat("&t=")
+    lecture = doc.lectureNumber
+    lecture = lecture.concat("")
     #str = JSON.stringify(doc)
     #str = JSON.stringify(doc, null, 4) #; // (Optional) beautiful indented output.
     #console.log(str) #; // Logs output to dev tools console.
     #alert(str) #; // Displays output using window.alert()
-    html =  "<li>Lecture 11.1 #{time}"
-    html += "<h4><a target='_blank' href=https://www.youtube.com/watch?v=LDnBL0fb3-c&index=39&list=PLLssT5z_DsK8Xwnh_0bjN4KNT81bekvtt&#t=#{time}>#{doc.content}</a>"
+    html =  "<li>#{lecture} #{time}"
+    html += "<h4><a target='_blank' href=#{link}#{time}>#{doc.content}</a>"
     html += "<small class='pull-right'>#{doc.score.toFixed(4)}</small></h4></li>"
     $("#search_results_list").append(html)

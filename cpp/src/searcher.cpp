@@ -64,8 +64,12 @@ std::string searcher::search(const std::string& request)
                 auto mdata = idx_->metadata(result.d_id);
                 auto content = *mdata.get<std::string>("content");
                 auto timestamp = *mdata.get<std::string>("timestamp");
+                auto lectureNumber = *mdata.get<std::string>("lectureNumber");
+                auto youtubeLink = *mdata.get<std::string>("youtubeLink");
                 obj["content"] = content; //idx_->doc_path(result.d_id);//idx_->doc_name(result.d_id); // this
                 obj["timestamp"] = timestamp; //idx_->doc_path(result.d_id);//name; //idx_->doc_path(result.d_id); // this
+                obj["lectureNumber"] = lectureNumber; //idx_->doc_path(result.d_id);//name; //idx_->doc_path(result.d_id); // this
+                obj["youtubeLink"] = youtubeLink; //idx_->doc_path(result.d_id);//name; //idx_->doc_path(result.d_id); // this
                 obj["score"] = result.score;
                 json_ret["results"].append(obj);
             }

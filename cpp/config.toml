@@ -1,5 +1,5 @@
 stop-words = "../meta/data/lemur-stopwords.txt"
-prefix = "/Users/bibian/CS410Project/cpp/build/data/"
+prefix = "../data/"
 function-words = "../meta/data/function-words.txt"
 punctuation = "../meta/data/sentence-boundaries/sentence-punctuation.txt"
 start-exceptions = "../meta/data/sentence-boundaries/sentence-start-exceptions.txt"

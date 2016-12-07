@@ -1,0 +1,4 @@
+type = "line-corpus"
+num-docs = 1755
+metadata = [{name = "content", type = "string"}, {name = "timestamp", type = "string"}, {name = "lectureNumber", type = "string"}, {name = "youtubeLink", type = "string"}]
+store-full-text = true
